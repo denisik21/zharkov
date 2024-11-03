@@ -22,6 +22,7 @@ func main() {
         {Name: "Склад 1", Address: "Великие Луки", CostPerKm: 30.0, FuelConsumptionPer100Km: 12.0, MaxVolume: 15.0, MaxWeight: 1000.0},
         {Name: "Склад 2", Address: "Санкт-Петербург", CostPerKm: 25.0, FuelConsumptionPer100Km: 10.0, MaxVolume: 20.0, MaxWeight: 1500.0},
         {Name: "Склад 3", Address: "Москва", CostPerKm: 20.0, FuelConsumptionPer100Km: 8.0, MaxVolume: 25.0, MaxWeight: 2000.0},
+        // {Name: "Склад 4", Address: "Брянск", CostPerKm: 25.0, FuelConsumptionPer100Km: 10.0, MaxVolume: 15.0, MaxWeight: 1000.0},
     }
 
     storeAddress := "Смоленск"
@@ -66,8 +67,7 @@ func main() {
     }
 
     // Устанавливаем ограничения
-    args = append(args, "11", "1000") // Максимально допустимое время и расстояние
-
+    args = append(args, "11", "300") // Максимально допустимое время и расстояние
 
     // Запускаем Python-скрипт с аргументами
     cmd := exec.Command("python", append([]string{"lp_solver.py"}, args...)...)
